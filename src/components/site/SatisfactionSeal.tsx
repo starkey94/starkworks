@@ -11,9 +11,7 @@ export function SatisfactionSeal({ className }: { className?: string }) {
         <circle cx="100" cy="100" r="96" className="fill-ink stroke-primary" strokeWidth="2" />
         <circle cx="100" cy="100" r="62" className="fill-none stroke-accent" strokeWidth="1.5" strokeDasharray="3 5" />
         <text className="fill-ink-foreground font-brand" fontSize="11">
-          <textPath href="#seal-circle" textLength="486" lengthAdjust="spacing">
-            SATISFACTION • GUARANTEED • QUALITY •
-          </textPath>
+          <textPath href="#seal-circle" textLength="472" lengthAdjust="spacing">{"SATISFACTION • GUARANTEED • QUALITY •"}</textPath>
         </text>
       </svg>
       <div className="absolute inset-0 grid place-items-center text-center">

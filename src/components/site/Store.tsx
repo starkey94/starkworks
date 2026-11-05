@@ -72,7 +72,7 @@ export function Store() {
               <p className="mt-2 text-sm font-medium opacity-80">
                 Buying in bulk for a project or reselling? Ask for our wholesale rates.
               </p>
-              <Button asChild size="xl" className="mt-6 bg-ink text-ink-foreground hover:bg-ink-soft">
+              <Button asChild variant="ink" size="xl" className="mt-6">
                 <a href={whatsappLink("Hello Stark, I'd like a price list for electrical materials.")} target="_blank" rel="noreferrer">
                   <MessageCircle /> Get price list
                 </a>

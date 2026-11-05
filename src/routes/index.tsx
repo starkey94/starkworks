@@ -34,9 +34,9 @@ function Index() {
       <SiteHeader />
       <main>
         <Hero />
+        <About />
         <Services />
         <Store />
-        <About />
         <WhyUs />
         <Contact />
       </main>

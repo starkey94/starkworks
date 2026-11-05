@@ -22,6 +22,7 @@ const buttonVariants = cva(
           "bg-gradient-ember text-accent-foreground font-semibold shadow-card hover:brightness-105 hover:-translate-y-0.5 transition-all",
         glass:
           "border border-ink-line bg-ink-foreground/5 text-ink-foreground font-semibold backdrop-blur hover:bg-ink-foreground/10 hover:border-primary/60 transition-all",
+        ink: "bg-ink text-ink-foreground font-semibold shadow-card hover:bg-ink-soft transition-colors",
       },
       size: {
         default: "h-9 px-4 py-2",

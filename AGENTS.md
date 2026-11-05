@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- The site is one long scrolling landing page at `/` with in-page anchors (`#services`, `#store`, ...), because the brief asked for smooth-scroll section navigation; section components live in `src/components/site/`.
+- Business contact details and nav/service lists live in `src/lib/site.ts`; read them from there instead of hardcoding in components.
+- The contact form has no backend; on submit it shows a success state that hands the request off to WhatsApp.

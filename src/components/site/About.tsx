@@ -4,7 +4,7 @@ import aboutImg from "@/assets/about-wiring.jpg";
 
 export function About() {
   return (
-    <section id="about" className="bg-background py-24 lg:py-32">
+    <section id="about" className="overflow-hidden bg-background py-24 lg:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:gap-20 lg:px-8">
         <div className="relative order-2 lg:order-1">
           <div className="overflow-hidden rounded-3xl shadow-lift">
@@ -17,7 +17,7 @@ export function About() {
               className="aspect-[4/5] w-full object-cover"
             />
           </div>
-          <div className="absolute -bottom-8 -right-4 max-w-[16rem] rounded-2xl bg-ink p-5 text-ink-foreground shadow-lift sm:-right-8">
+          <div className="absolute -bottom-8 right-4 max-w-[16rem] rounded-2xl bg-ink p-5 text-ink-foreground shadow-lift sm:-right-8">
             <FileCheck2 className="h-7 w-7 text-primary" />
             <div className="mt-3 font-display text-xl font-bold">RC {SITE.rc}</div>
             <p className="mt-1 text-sm text-ink-muted">Officially registered business you can trust.</p>

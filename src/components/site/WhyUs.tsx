@@ -10,7 +10,7 @@ const POINTS = [
 
 export function WhyUs() {
   return (
-    <section className="bg-background py-24 lg:py-32">
+    <section className="overflow-hidden bg-background py-24 lg:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-[1fr_1.3fr] lg:px-8">
         <div className="relative mx-auto w-full max-w-sm">
           <div className="absolute inset-6 animate-pulse-glow rounded-full bg-primary/25 blur-3xl" />

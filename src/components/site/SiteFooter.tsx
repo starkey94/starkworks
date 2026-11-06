@@ -39,7 +39,7 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-primary">
+              <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-primary">
                 <MessageCircle className="h-4 w-4" /> WhatsApp
               </a>
             </li>

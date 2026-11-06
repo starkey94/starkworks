@@ -33,7 +33,13 @@ export function Contact() {
   const details = [
     { icon: MapPin, label: "Visit us", value: SITE.address, href: SITE.mapsUrl, external: true },
     { icon: Phone, label: "Call us", value: SITE.phoneDisplay, href: `tel:${SITE.phoneE164}` },
-    { icon: MessageCircle, label: "WhatsApp", value: "Chat with us instantly", href: SITE.whatsapp, external: true },
+    {
+      icon: MessageCircle,
+      label: "WhatsApp",
+      value: "Chat with us instantly",
+      href: whatsappLink("Hello Stark Electrical Work, I'd like to chat with you."),
+      external: true,
+    },
     { icon: AtSign, label: "Follow us", value: SITE.social, href: SITE.instagram, external: true },
   ];
 
@@ -57,7 +63,7 @@ export function Contact() {
               <li key={label}>
                 <a
                   href={href}
-                  {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+                  {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="group flex items-center gap-4 rounded-2xl border border-ink-line bg-ink-soft/60 p-4 transition-all hover:border-primary/60 hover:bg-ink-soft"
                 >
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-ink text-primary transition-colors group-hover:bg-gradient-power group-hover:text-primary-foreground">
@@ -86,7 +92,7 @@ export function Contact() {
               </p>
               <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                 <Button asChild variant="power" size="xl">
-                  <a href={whatsappLink(sentMessage)} target="_blank" rel="noreferrer">
+                  <a href={whatsappLink(sentMessage)} target="_blank" rel="noopener noreferrer">
                     <MessageCircle /> Send on WhatsApp
                   </a>
                 </Button>

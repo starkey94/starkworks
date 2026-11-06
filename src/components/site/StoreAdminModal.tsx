@@ -195,8 +195,7 @@ export function StoreAdminModal({ open, onOpenChange }: StoreAdminModalProps) {
             </div>
             <h3 className="mt-4 text-lg font-bold">Enter Admin PIN</h3>
             <p className="mt-1 max-w-xs text-xs text-muted-foreground">
-              This area is restricted to Stark Electrical Work administrators. (Default PIN:{" "}
-              <code className="font-mono font-bold text-accent">stark2026</code>)
+              This area is restricted to Stark Electrical Work administrators. Enter your secure PIN to continue.
             </p>
 
             <form onSubmit={handlePinSubmit} className="mt-6 flex w-full max-w-xs flex-col gap-3">

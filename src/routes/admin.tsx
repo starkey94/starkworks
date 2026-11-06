@@ -204,10 +204,7 @@ function AdminPage() {
             </div>
             <h1 className="mt-5 text-2xl font-bold">Admin Portal</h1>
             <p className="mt-2 text-sm text-muted-foreground">
-              Enter your admin PIN to manage material prices, stock, and display modes.
-            </p>
-            <p className="mt-1 text-xs text-muted-foreground">
-              (Default PIN: <code className="font-mono font-bold text-accent">stark2026</code>)
+              This area is restricted to Stark Electrical Work administrators. Enter your secure PIN to continue.
             </p>
 
             <form onSubmit={handlePinSubmit} className="mt-6 space-y-4">

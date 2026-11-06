@@ -2,7 +2,8 @@ const WHATSAPP_BASE = "https://wa.me/2348137910788";
 export const DEFAULT_WHATSAPP_MESSAGE = "Hello Stark Electrical Work, I'd like to chat with you.";
 
 export function whatsappLink(text: string = DEFAULT_WHATSAPP_MESSAGE) {
-  return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
+  const encoded = encodeURIComponent(text).replace(/'/g, "%27");
+  return `${WHATSAPP_BASE}?text=${encoded}`;
 }
 
 export const SITE = {

@@ -37,7 +37,7 @@ export function Contact() {
       icon: MessageCircle,
       label: "WhatsApp",
       value: "Chat with us instantly",
-      href: whatsappLink("Hello Stark Electrical Work, I'd like to chat with you."),
+      href: whatsappLink(),
       external: true,
     },
     { icon: AtSign, label: "Follow us", value: SITE.social, href: SITE.instagram, external: true },
@@ -57,6 +57,14 @@ export function Contact() {
           <p className="mt-5 max-w-md text-lg text-ink-muted">
             Tell us what you need and we'll get back to you with a quote.
           </p>
+
+          <div className="mt-8">
+            <Button asChild variant="power" size="xl">
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
+                <MessageCircle /> Chat with us instantly
+              </a>
+            </Button>
+          </div>
 
           <ul className="mt-10 space-y-3">
             {details.map(({ icon: Icon, label, value, href, external }) => (
@@ -123,7 +131,7 @@ export function Contact() {
                     type="tel"
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    placeholder="080..."
+                    placeholder="e.g. 0813 791 0788"
                     className="h-12 rounded-xl"
                     maxLength={20}
                   />
@@ -131,12 +139,15 @@ export function Contact() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="service">Service Needed</Label>
-                <Select value={form.service} onValueChange={(v) => setForm({ ...form, service: v })}>
+                <Select
+                  value={form.service}
+                  onValueChange={(service) => setForm({ ...form, service })}
+                >
                   <SelectTrigger id="service" className="h-12 rounded-xl">
-                    <SelectValue placeholder="Choose a service" />
+                    <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
-                    {[...SERVICES, "Buying Electrical Materials"].map((s) => (
+                    {SERVICES.map((s) => (
                       <SelectItem key={s} value={s}>
                         {s}
                       </SelectItem>
@@ -162,6 +173,16 @@ export function Contact() {
               )}
               <Button type="submit" variant="power" size="xl" className="w-full">
                 <Send /> Send Request
+              </Button>
+              <div className="relative my-2 flex items-center justify-center">
+                <span className="h-px w-full bg-border" />
+                <span className="bg-card px-3 text-xs uppercase tracking-wider text-muted-foreground">or</span>
+                <span className="h-px w-full bg-border" />
+              </div>
+              <Button asChild variant="outline" size="xl" className="w-full">
+                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle /> Chat with us instantly
+                </a>
               </Button>
             </form>
           )}

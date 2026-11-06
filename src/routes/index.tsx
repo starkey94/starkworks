@@ -7,6 +7,7 @@ import { Store } from "@/components/site/Store";
 import { WhyUs } from "@/components/site/WhyUs";
 import { Contact } from "@/components/site/Contact";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 
 const TITLE = "Stark Electrical Work — Electrical & Solar Solutions | Dreams to Reality";
 const DESCRIPTION =
@@ -41,6 +42,7 @@ function Index() {
         <Contact />
       </main>
       <SiteFooter />
+      <WhatsAppFloat />
     </div>
   );
 }

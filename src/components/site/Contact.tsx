@@ -27,7 +27,7 @@ export function Contact() {
   };
 
   const sentMessage = sent
-    ? `Hello Stark, my name is ${sent.name} (${sent.phone}). I need: ${sent.service}.${sent.message ? ` ${sent.message}` : ""}`
+    ? `Hello Stark Electrical Work, I'd like to chat with you. My name is ${sent.name} (${sent.phone}). I need: ${sent.service}.${sent.message ? ` ${sent.message}` : ""}`
     : "";
 
   const details = [

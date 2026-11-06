@@ -1,10 +1,18 @@
+const WHATSAPP_BASE = "https://wa.me/2348137910788";
+export const DEFAULT_WHATSAPP_MESSAGE = "Hello Stark Electrical Work, I'd like to chat with you.";
+
+export function whatsappLink(text: string = DEFAULT_WHATSAPP_MESSAGE) {
+  return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
+}
+
 export const SITE = {
   name: "Stark Electrical Work",
   tagline: "Dreams to Reality",
   rc: "2979226",
   phoneDisplay: "+234 813 791 0788",
   phoneE164: "+2348137910788",
-  whatsapp: "https://wa.me/2348137910788",
+  whatsappBase: WHATSAPP_BASE,
+  whatsapp: whatsappLink(),
   address: "Itanrin Street, Adjacent Omega Champion Church",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Itanrin+Street+Omega+Champion+Church",
@@ -28,7 +36,3 @@ export const SERVICES = [
   "Consultation",
   "Training",
 ] as const;
-
-export function whatsappLink(text?: string) {
-  return text ? `${SITE.whatsapp}?text=${encodeURIComponent(text)}` : SITE.whatsapp;
-}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, Phone, SlidersHorizontal, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -60,6 +60,16 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
+          <Button
+            asChild
+            variant="ghost"
+            size="sm"
+            className="hidden h-10 rounded-full border border-ink-line px-3.5 text-xs font-semibold text-accent hover:border-accent hover:bg-ink-soft sm:inline-flex"
+          >
+            <a href="/admin">
+              <SlidersHorizontal className="mr-1.5 h-3.5 w-3.5" /> Store Admin
+            </a>
+          </Button>
           <Button asChild variant="power" size="xl" className="hidden h-11 px-5 text-sm sm:inline-flex">
             <a href={`tel:${SITE.phoneE164}`}>
               <Phone /> Call Now
@@ -92,6 +102,14 @@ export function SiteHeader() {
               {l.label}
             </a>
           ))}
+          <a
+            href="/admin"
+            onClick={() => setOpen(false)}
+            className="flex items-center justify-between border-b border-ink-line py-4 font-display text-lg text-accent"
+          >
+            <span>Store Admin Portal</span>
+            <SlidersHorizontal className="h-5 w-5" />
+          </a>
           <Button asChild variant="power" size="xl" className="mt-6 w-full">
             <a href={`tel:${SITE.phoneE164}`}>
               <Phone /> Call {SITE.phoneDisplay}

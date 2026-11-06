@@ -3,10 +3,6 @@ import { NAV_LINKS, SITE } from "@/lib/site";
 import logoFull from "@/assets/stark-logo-full.png";
 
 export function SiteFooter() {
-  const handleOpenAdmin = () => {
-    window.dispatchEvent(new CustomEvent("stark:open-store-admin"));
-  };
-
   return (
     <footer className="border-t border-ink-line bg-ink text-ink-foreground">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
@@ -37,6 +33,14 @@ export function SiteFooter() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="/admin"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:underline"
+              >
+                <SlidersHorizontal className="h-3.5 w-3.5" /> Store Admin Portal
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -79,13 +83,12 @@ export function SiteFooter() {
           <div className="flex items-center gap-4">
             <span>Dreams to Reality · RC {SITE.rc}</span>
             <span className="text-ink-muted/30">|</span>
-            <button
-              type="button"
-              onClick={handleOpenAdmin}
+            <a
+              href="/admin"
               className="inline-flex items-center gap-1 text-ink-muted/60 transition-colors hover:text-accent"
             >
-              <SlidersHorizontal className="h-3 w-3" /> Store Admin
-            </button>
+              <SlidersHorizontal className="h-3 w-3" /> Store Admin (/admin)
+            </a>
           </div>
         </div>
       </div>

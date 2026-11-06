@@ -38,15 +38,27 @@ export function Store() {
             </p>
           </div>
 
-          <Button
-            type="button"
-            variant="outline"
-            size="sm"
-            onClick={() => setAdminOpen(true)}
-            className="self-start rounded-full border-border/80 bg-background/80 text-xs text-muted-foreground backdrop-blur hover:border-primary hover:text-foreground md:self-auto"
-          >
-            <SlidersHorizontal className="mr-1.5 h-3.5 w-3.5 text-primary" /> Admin: Update Prices
-          </Button>
+          <div className="flex flex-wrap items-center gap-2 self-start md:self-auto">
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className="rounded-full border-border/80 bg-background/80 text-xs text-muted-foreground backdrop-blur hover:border-primary hover:text-foreground"
+            >
+              <a href="/admin">
+                <SlidersHorizontal className="mr-1.5 h-3.5 w-3.5 text-primary" /> Admin Portal (/admin)
+              </a>
+            </Button>
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => setAdminOpen(true)}
+              className="rounded-full text-xs text-muted-foreground hover:text-foreground"
+            >
+              Quick Popup
+            </Button>
+          </div>
         </div>
 
         {/* Showcase Banner */}
